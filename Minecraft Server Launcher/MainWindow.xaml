@@ -1,0 +1,36 @@
+﻿<Window x:Class="Minecraft_Server_Launcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Minecraft_Server_Launcher"
+        mc:Ignorable="d"
+        Title="MC Server Manager - Lenny Industries" Height="350" Width="525"
+        ResizeMode="NoResize">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Settings">
+                <MenuItem Header="_Import Server List" Click="ImportServerList_OnClick"/>
+                <MenuItem Header="_Export Server List" Click="ExportServerList_OnClick"/>
+                <MenuItem Header="_Change Server List Location" Click="ChangeServerListLocation_OnClick"/>
+                <Separator/>
+                <MenuItem Name="noWarningOnExitMenuItem" Header="No _Warning On Exit" IsCheckable="True"/>
+                <Separator/>
+                <MenuItem Header="E_xit" Click="Exit_OnClick"/>
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <ListBox x:Name="serverListBox" HorizontalAlignment="Left" Height="281" Margin="10,10,0,0" VerticalAlignment="Top" Width="394"/>
+            <Button x:Name="launchServerButton" Content="Launch Server" HorizontalAlignment="Left" Margin="409,10,0,0" VerticalAlignment="Top" Width="100" Click="LaunchServerButton_OnClick"/>
+            <Button x:Name="manageServerButton" Content="Manage Server" HorizontalAlignment="Left" Margin="409,35,0,0" VerticalAlignment="Top" Width="100" Click="ManageServerButton_OnClick"/>
+            <Button x:Name="addServerButton" Content="Add Server" HorizontalAlignment="Left" Margin="409,85,0,0" VerticalAlignment="Top" Width="100" Click="AddServerButton_OnClick"/>
+            <Button x:Name="removeServerButton" Content="Remove Server" HorizontalAlignment="Left" Margin="409,110,0,0" VerticalAlignment="Top" Width="100" Click="RemoveServerButton_OnClick"/>
+            <Button x:Name="sortServerListButton" Content="Sort Server List" HorizontalAlignment="Left" Margin="409,160,0,0" VerticalAlignment="Top" Width="100" Click="SortServerListButton_OnClick"/>
+            <Button x:Name="clearServerListButton" Content="Clear Server List" HorizontalAlignment="Left" Margin="409,185,0,0" VerticalAlignment="Top" Width="100" Click="ClearServerListButton_OnClick"/>
+            <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="409,271,0,0" VerticalAlignment="Top" Width="100" Click="Exit_OnClick"/>
+            <Separator HorizontalAlignment="Left" Height="20" Margin="409,60,0,0" VerticalAlignment="Top" Width="100"/>
+            <Separator HorizontalAlignment="Left" Height="20" Margin="409,135,0,0" VerticalAlignment="Top" Width="100"/>
+            <Separator HorizontalAlignment="Left" Height="56" Margin="409,210,0,0" VerticalAlignment="Top" Width="100"/>
+        </Grid>
+    </DockPanel>
+</Window>
